@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(25, 37, 22);
+}
+
+h1 {
+    color: rgb(200, 160, 240);
+    font: bold 40px Tahoma, sans-serif;
+}
+
+.highlight {
+    color: rgb(148, 125, 23);
+}
+
+#header {
+    background: rgb(170, 160, 0);
+}
+
+.table-border {
+    border: 3px solid white;
+}
+
+.background-color {
+    background-color: rgb(38, 38, 134);
+}
+
+p:hover {
+    color: blueviolet;
+    background-color: #fff0fa;
+    cursor: pointer;
+}
+
+.text-align_center {
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    border-color: rgb(5, 0, 9);
+    outline: none;
+    background-color: #fff0fa;
+}

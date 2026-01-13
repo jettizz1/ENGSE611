@@ -1,0 +1,31 @@
+/* กล่องเเม่ */
+.flex-box {
+    display: flex;
+    flex-direction: column; /* row หรือ column */
+    gap: 20px;
+    background: #f0f0f0;
+    padding: 20px;
+    height: 300px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* กล่องถูก */
+.item {
+    background: white;
+    color: black;
+    width: 300px;
+    padding: 20px;
+    padding-top: 1px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.item:hover {
+    transform: scale(120%);
+}

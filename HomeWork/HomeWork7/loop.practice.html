@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop.practice</title>
+</head>
+<body>
+    <h1>loop.practice</h1>
+    <button onclick="maxNumber()">Run Code</button>
+    <pre id="outputBox"></pre>
+
+    <script>
+        function maxNumber() {
+            const output = [];
+            for (let i = 0; i <= 20; i++) {
+                let message = "" + i + " (" + (i % 2 === 0 ? "คู่" : "คี่") + ")";
+                output.push(message);
+                console.log(message);
+            }
+
+            for (let i = 0; i <= 20; i += 2) {
+                let message = "นับทีละ 2: " + i;
+                output.push(message);
+                console.log(message);
+            }
+
+            for (let i = 10; i >= 0; i--) {
+                let message = "ถอยหลัง: " + i;
+                output.push(message);
+                console.log(message);
+            }
+
+            document.getElementById("outputBox").textContent = output.join("\n");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade.Switch</title>
+</head>
+<body>
+    <h1>การตรวจสอบเกรด</h1>
+    <h1>(Switch Statement)</h1>
+    <button onclick="runDemo()">Run Code</button>
+    <pre id="outputBox"></pre>
+
+    <script>
+        function runDemo() {
+            const output = [];
+
+            // คะเเนนเริ่มต้น
+            let scores = [];
+            for (let i = 0; i < 4; i++) {
+                scores.push(Math.floor(Math.random() * 100) + 1);
+            }
+            
+            // วน loop ตรวจสอบคะแนนและเกรด
+            for (let score of scores) {
+                output.push("คะแนน: " + score);
+                console.log("คะแนน: " + score);
+
+                // ตรวจสอบเกรด
+                if (score >= 80) {
+                    output.push("เกรด: A");
+                    console.log("เกรด: A");
+                } else if (score >= 70) {
+                    output.push("เกรด: B");
+                    console.log("เกรด: B");
+                } else if (score >= 64) {
+                    output.push("เกรด: C");
+                    console.log("เกรด: C");
+                } else if (score >= 50) {
+                    output.push("เกรด: D");
+                    console.log("เกรด: D");
+                } else {
+                    output.push("เกรด: F");
+                    console.log("เกรด: F");
+                }
+
+                // เงื่อนไข ผ่าน / ไม่ผ่าน
+                if (score >= 50) {
+                    output.push("ผลสอบ: ผ่าน");
+                    console.log("ผลสอบ: ผ่าน");
+                } else {
+                    output.push("ผลสอบ: ไม่ผ่าน");
+                    console.log("ผลสอบ: ไม่ผ่าน");
+                }
+
+                // คำอธิบาย
+                switch (true) {
+                    case score >= 80:
+                        output.push("คำอธิบาย: ยอดเยี่ยมมาก");
+                        console.log("คำอธิบาย: ยอดเยี่ยมมาก");
+                        break;
+                    case score >= 70:
+                        output.push("คำอธิบาย: ดีมาก รักษามาตรฐานไว้");
+                        console.log("คำอธิบาย: ดีมาก รักษามาตรฐานไว้");
+                        break;
+                    case score >= 60:
+                        output.push("คำอธิบาย: ผ่านเกณฑ์ระดับดี");
+                        console.log("คำอธิบาย: ผ่านเกณฑ์ระดับดี");
+                        break;
+                    case score >= 50:
+                        output.push("คำอธิบาย: พอใช้ เเต่ควรพัฒนาเพิ่ม");
+                        console.log("คำอธิบาย: พอใช้ เเต่ควรพัฒนาเพิ่ม");
+                        break;
+                    default:
+                        output.push("คำอธิบาย: ต้องลงทะเบียนเรียนใหม่");
+                        console.log("คำอธิบาย: ต้องลงทะเบียนเรียนใหม่");
+                }
+            }
+
+            // อัปเดตผลลัพธ์บนหน้าเว็บ
+            document.getElementById("outputBox").textContent = output.join("\n");
+        }
+    </script>
+</body>
+</html>
